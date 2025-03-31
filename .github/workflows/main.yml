@@ -35,8 +35,8 @@ jobs:
     - name: Login to Docker Hub
       uses: docker/login-action@v2
       with:
-        username: ${{ env.DOCKER_USERNAME }}
-        password: ${{ env.DOCKER_PASSWORD }}
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
 
     # 设置环境变量以包含时间戳  
     - name: Get current date
@@ -50,5 +50,5 @@ jobs:
         platforms: linux/amd64
         push: true
         tags: |
-          ${{ env.DOCKER_USERNAME }}/wrapper-amdl:latest
-          ${{ env.DOCKER_USERNAME }}/wrapper-amdl:${{ env.BUILD_DATE }}
+          ${{ secrets.DOCKER_USERNAME }}/wrapper-amdl:latest
+          ${{ secrets.DOCKER_USERNAME }}/wrapper-amdl:${{ env.BUILD_DATE }}
