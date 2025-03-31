@@ -20,8 +20,8 @@ jobs:
         cd apple-music-downloader
         go build -o dl main.go
         echo "当前工作目录: $(pwd)"
-        ls -l ../main/
-        mv dl ${GITHUB_WORKSPACE}/main/
+        ls -l ../
+        mv dl ${GITHUB_WORKSPACE}/
         
 
     - name: Set up QEMU
