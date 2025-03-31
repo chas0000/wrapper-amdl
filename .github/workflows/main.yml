@@ -15,13 +15,13 @@ jobs:
 
     - name: git_wrapper
       run: |
-        cho "当前工作目录: $(pwd)"
+        echo "当前工作目录: $(pwd)"
         git clone https://github.com/zhaarey/wrapper.git
         mv wrapper ../
         ls -l ../   
     - name: git_amdl
       run: |
-        cho "当前工作目录: $(pwd)"
+        echo "当前工作目录: $(pwd)"
         git clone https://github.com/zhaarey/apple-music-downloader.git
         apt update&&apt install golang -y
         cd apple-music-downloader
