@@ -3,7 +3,7 @@ FROM gpac/ubuntu
 
 WORKDIR /app
 #COPY --from=builder /app /app
-COPY ./warpper /app/
+COPY ./wrapper /app/wrapper
 COPY ./mp4decrypt /usr/bin/
 COPY ./dl /usr/bin/
 ENV args ""
