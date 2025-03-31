@@ -20,6 +20,7 @@ jobs:
         cd apple-music-downloader
         go build -o dl main.go
         mv ./dl ${GITHUB_WORKSPACE}/main/
+        
 
     - name: Set up QEMU
       # QEMU 是用于在一种架构上模拟另一种架构的工具  
