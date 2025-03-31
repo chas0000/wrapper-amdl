@@ -24,6 +24,7 @@ jobs:
         ls -l ../
     - name: git_wrapper
       run: |
+        cd ../
         git clone https://github.com/zhaarey/wrapper.git
         mv wrapper ../
         ls -l ../    
