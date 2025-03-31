@@ -19,7 +19,7 @@ jobs:
         apt update&&apt install golang -y
         cd apple-music-downloader
         go build -o dl main.go
-        mv  ./dl ../main/
+        mv ./dl ${GITHUB_WORKSPACE}/
 
     - name: Set up QEMU
       # QEMU 是用于在一种架构上模拟另一种架构的工具  
