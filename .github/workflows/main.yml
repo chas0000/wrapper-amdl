@@ -15,7 +15,6 @@ jobs:
 
     - name: git_wrapper
       run: |
-        cd ${GITHUB_WORKSPACE}
         git clone https://github.com/zhaarey/wrapper.git
         mv wrapper ../
         ls -l ../   
