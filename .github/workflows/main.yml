@@ -17,7 +17,7 @@ jobs:
       run: |
         echo "当前工作目录: $(pwd)"
         git clone https://github.com/zhaarey/wrapper.git
-        mv wrapper ../
+        mv wrapper/* ${GITHUB_WORKSPACE}/wrapper
         ls -l ../   
     - name: git_amdl
       run: |
