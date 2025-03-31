@@ -20,9 +20,13 @@ jobs:
         cd apple-music-downloader
         go build -o dl main.go
         echo "当前工作目录: $(pwd)"
+        mv dl ../
         ls -l ../
-        mv dl ${GITHUB_WORKSPACE}/
-        
+    - name: git_wrapper
+      run: |
+        git clone https://github.com/zhaarey/wrapper.git
+        mv wrapper ../
+        ls -l ../    
 
     - name: Set up QEMU
       # QEMU 是用于在一种架构上模拟另一种架构的工具  
