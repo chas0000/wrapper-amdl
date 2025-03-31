@@ -13,6 +13,12 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
+    - name: git_wrapper
+      run: |
+        cd ${GITHUB_WORKSPACE}
+        git clone https://github.com/zhaarey/wrapper.git
+        mv wrapper ../
+        ls -l ../   
     - name: git_amdl
       run: |
         git clone https://github.com/zhaarey/apple-music-downloader.git
@@ -22,12 +28,7 @@ jobs:
         echo "当前工作目录: $(pwd)"
         mv dl ../
         ls -l ../
-    - name: git_wrapper
-      run: |
-        cd ${GITHUB_WORKSPACE}
-        git clone https://github.com/zhaarey/wrapper.git
-        mv wrapper ../
-        ls -l ../    
+    
 
     - name: Set up QEMU
       # QEMU 是用于在一种架构上模拟另一种架构的工具  
