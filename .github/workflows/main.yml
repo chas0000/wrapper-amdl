@@ -19,7 +19,9 @@ jobs:
         apt update&&apt install golang -y
         cd apple-music-downloader
         go build -o dl main.go
-        mv ./dl ${GITHUB_WORKSPACE}/main/
+        echo "当前工作目录: $(pwd)"
+        ls -l ../main/
+        mv dl ${GITHUB_WORKSPACE}/main/
         
 
     - name: Set up QEMU
