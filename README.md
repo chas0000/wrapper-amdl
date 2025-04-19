@@ -1,3 +1,5 @@
+带ttyd的版本请移步<https://github.com/chas0000/wrapper-test>或<https://github.com/akina-up/wrapper-amdl>
+
 # wrapper-amdl
 攒来自用的一个docker镜像  
 说明：  
